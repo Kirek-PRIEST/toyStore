@@ -4,7 +4,7 @@ import Store.toys.ToysList;
 
 public interface Operations {
 
-    ToysList operations(ToysList list, int ... data);
+    ToysList operations(ToysList list);
 
 
 
