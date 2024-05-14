@@ -4,33 +4,44 @@ import Store.game.Game;
 import Store.operations.*;
 import Store.toys.ToysList;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Starter {
 
-    Controller controller = new Controller();
+
     ToysList list = new ToysList();
-    Game game = new Game();
+    LinkedList<String> toGiveOut = new LinkedList<>();
+    private boolean isExit = false;
+    HashMap<Integer, Operations> map = Commands.commands();
 
     public void run() {
-        HashMap<Integer, Operations> map = Commands.commands();
-        Operations operations = map.get(2);
-        operations.operations(list);
-        System.out.println(list);
-
-//        controller.addingToy(list, 1, 50, 1);
-//        controller.addingToy(list, 2, 50, 1);
-//        controller.addingToy(list, 3, 50, 1);
-//        controller.addingToy(list, 4, 50, 1);
-//        controller.addingToy(list, 5, 50, 1);
-//        controller.addingToy(list, 6, 25, 2);
-//        controller.addingToy(list, 7, 10, 3);
-//        controller.addingToy(list, 8, 5, 4);
-
-        //controller.valueChanging(list, 1, 50);
-        //controller.countChanging(list, 1, 1);
-        //controller.removingToy(list, 1);
+        try {
+            while (true) {
+                while (!isExit) {
+                    int choice = Integer.parseInt(prompt("Список доступных действий:\n" +
+                            "1 = создать игрушку\n" +
+                            "2 = удалить игрушку\n" +
+                            "3 = изменить количество игрушек\n" +
+                            "4 = изменить редкость игрушек\n" +
+                            "5 = печать списка игрушек\n" +
+                            "6 = Игра\n" +
+                            "7 = выход из программы"));
+                    if (choice > 0 && choice < 8) {
+                        Operations operations = map.get(choice);
+                        operations.operations(list);
+                    }else {
+                        System.out.println("Введена некорректная команда. Пожалуйста, повторите ввод.\n");
+                        run();
+                    }
+                }
+            }
+        }catch (NumberFormatException e){
+            System.out.println("Введена некорректная команда. Пожалуйста, повторите ввод.\n");
+            run();
+        }
 
     }
 
@@ -39,4 +50,5 @@ public class Starter {
         System.out.println(message);
         return scanner.nextLine();
     }
+
 }

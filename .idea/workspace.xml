@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da4af72-5d70-45ce-b31e-292032ce9272" name="Changes" comment="Первый коммит, хотя полработы уже сделано :(">
-      <change afterPath="$PROJECT_DIR$/src/Store/Commands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/ToysWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/game/GameActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/game/GameOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/game/StartGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/game/ToyMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/operations/PrintToysList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/toys/EndProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Commands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Store/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/actions/Actions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/actions/AddToy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/actions/CountChange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/actions/RemoveToy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/actions/ValueChange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/operations/AddingToy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/AddingToy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/operations/CountChanging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/CountChanging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/operations/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/Operations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/operations/RemovingToy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/RemovingToy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/operations/ValueChanging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/ValueChanging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/game/GiveOutAPrize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/game/GiveOutAPrize.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,20 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Study/OOP/ComplexCalculater",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Study/OOP/ComplexCalculater&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="newStore" />
