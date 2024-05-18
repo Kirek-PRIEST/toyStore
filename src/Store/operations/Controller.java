@@ -1,4 +1,4 @@
-package Store;
+package Store.operations;
 
 import Store.toys.Toy;
 import Store.toys.ToysList;
@@ -14,7 +14,11 @@ public class Controller {
             Toy newToy = new Toy(id, prompt("Введите название игркшки: "),
                     Integer.parseInt(prompt("Введите количество игрушек: ")), Integer.parseInt(prompt("Введите редкость игрушки: ")));
             list.addToy(newToy);
-        } else throw new RuntimeException("Игрушка с таким ID существует");
+        } else {
+            System.out.println("Игрушка с таким ID существует");
+            availableToys(list);
+        }
+
         return list;
     }
 
@@ -26,7 +30,10 @@ public class Controller {
             if (!Objects.equals(prompt("Вы выбрали игрушку " + availableToys.containsKey(id) + ". Хотите изменить количество этой игрушки? (Y/N)").toLowerCase(), "y")) {
                 if (Objects.equals(prompt("Хотите выбрать другую игрушку для изменения количества (Y), или выйти (N)?").toLowerCase(), "y")) {
                     countChanging(list);
-                } else throw new RuntimeException("Операция изменения количества игрушек прервана");
+                } else {
+                    System.out.println("Изменение количества игрущек прервано. Выберите новую прерацию.");
+                    return list;
+                }
             } else {
                 for (Toy t : list.getList()) {
                     if (t.getId() == id) {
@@ -34,13 +41,19 @@ public class Controller {
                         if (newCunt > 0) {
                             t.setCount(newCunt);
                         } else {
-                            throw new RuntimeException("Игрушек должно быть больше нуля. Если их нет - удалите игрушку.");
+                            System.out.println("Игрушка с таким ID не существует");
+                            if (Objects.equals(prompt("Хотите продолжить изменение количества игрушек (Y), или выйти (N)?").toLowerCase(), "y")) {
+                                countChanging(list);
+                            } else return list;
                         }
                     }
                 }
             }
         } else {
-            throw new RuntimeException("Игрушка с таким ID не существует");
+            System.out.println("Игрушка с таким ID не существует");
+            if (Objects.equals(prompt("Хотите продолжить изменение количества игрушек (Y), или выйти (N)?").toLowerCase(), "y")) {
+                countChanging(list);
+            } else return list;
         }
         return list;
     }
@@ -50,18 +63,28 @@ public class Controller {
         System.out.println("Список доступных игрушек: \n" + availableToys);
         int id = Integer.parseInt(prompt("Введите ID игрушки, которую хотите удалить: "));
         if (IDChecker(list, id)) {
-            if (!Objects.equals(prompt("Вы выбрали игрушку " + availableToys.containsKey(id) + ". Хотите удалить её? (Y/N)").toLowerCase(), "y")) {
-                if (Objects.equals(prompt("Хотите выбрать другую игрушку для удаления (Y), или выйти (N)?").toLowerCase(), "y")) {
+            String choiceToy = prompt("Вы выбрали игрушку " + availableToys.get(id) + ". Хотите удалить её? (Y/N)");
+            if (yesOrNo(choiceToy)) {
+                String anotherToy = prompt("Хотите выбрать другую игрушку для удаления (Y), или выйти (N)?").toLowerCase();
+                if (yesOrNo(anotherToy)) {
                     removingToy(list);
-                } else throw new RuntimeException("Операция удаления прервана");
+                } else return list;
                 for (Toy t : list.getList()) {
                     if (t.getId() == id) {
                         list.deleteToy(t);
                     }
                 }
             }
-        } else throw new RuntimeException("Игрушка с таким ID не существует");
+        } else {
+            System.out.println("Игрушка с таким ID не существует");
+            String returnRemoving = prompt("Хотите продолжить изменение количества игрушек (Y), или выйти (N)?").toLowerCase();
+            if (yesOrNo(returnRemoving)) {
+                removingToy(list);
+            } else return list;
+
+        }
         return list;
+
     }
 
     public ToysList valueChanging(ToysList list) {
@@ -72,14 +95,32 @@ public class Controller {
             if (!Objects.equals(prompt("Вы выбрали игрушку " + availableToys.containsKey(id) + ". Хотите изменить редкость этой игрушки? (Y/N)").toLowerCase(), "y")) {
                 if (Objects.equals(prompt("Хотите выбрать другую игрушку для изменения редкоти (Y), или выйти (N)?").toLowerCase(), "y")) {
                     countChanging(list);
-                } else throw new RuntimeException("Операция изменения редкости игрушек прервана");
-                for (Toy t : list.getList()) {
-                    if (t.getId() == id) {
-                        t.setValue(Integer.parseInt(prompt("Введите новое значение редкости: 1 - обычная, 2 - необычная, 3 - редкая, 4 - уникальная")));
-                    }
+                } else {
+                    throw new RuntimeException("Операция изменения редкости игрушек прервана");
                 }
-            } else throw new RuntimeException("Игрушка с таким ID не существует");
+                try {
+                    for (Toy t : list.getList()) {
+                        if (t.getId() == id) {
+                            int newValue = Integer.parseInt(prompt("Введите новое значение редкости: 1 - обычная, 2 - необычная, 3 - редкая, 4 - уникальная"));
+                            if (newValue > 0 && newValue < 5) {
+                                t.setValue(newValue);
+                            }else {
+                                System.out.println("Введено некорректное значение редкости, повторите снова");
+                                valueChanging(list);
+                            }
+                        }
+                    }
+                } catch (NumberFormatException e){
+                    System.out.println("Введено некорректное значение редкости, повторите снова");
+                    valueChanging(list);
+                }
 
+            } else System.out.println("Игрушка с таким ID не существует");
+            {
+                if (Objects.equals(prompt("Хотите продолжить изменение количества игрушек (Y), или выйти (N)?").toLowerCase(), "y")) {
+                    valueChanging(list);
+                } else return list;
+            }
         }
         return list;
     }
@@ -106,6 +147,13 @@ public class Controller {
             availableToys.put(t.getId(), t.getName());
         }
         return availableToys;
+    }
+
+    private boolean yesOrNo(String income){
+        if (income.equals("y") || Objects.equals(income, "n")){
+            return income.equals("y");
+        }
+        return false;
     }
 }
 

@@ -5,12 +5,9 @@ import Store.game.GameOptions;
 import Store.game.GiveOutAPrize;
 import Store.game.StartGame;
 import Store.operations.*;
-import Store.toys.EndProgram;
-import Store.toys.ToysList;
+import Store.operations.EndProgram;
 
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
 
 public class Commands {
     public static HashMap<Integer, Object> startMenu(){

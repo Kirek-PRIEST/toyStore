@@ -1,6 +1,7 @@
-package Store.toys;
+package Store.operations;
 
 import Store.operations.Operations;
+import Store.toys.ToysList;
 
 public class EndProgram implements Operations {
 

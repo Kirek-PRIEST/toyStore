@@ -4,19 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9da4af72-5d70-45ce-b31e-292032ce9272" name="Changes" comment="Первый коммит, хотя полработы уже сделано :(">
-      <change afterPath="$PROJECT_DIR$/src/Store/ToysWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/game/GameActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/game/GameOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/game/StartGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/game/ToyMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/operations/PrintToysList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/toys/EndProgram.java" afterDir="false" />
+    <list default="true" id="9da4af72-5d70-45ce-b31e-292032ce9272" name="Changes" comment="Сделано меню, и что-то ещё. Программа близится к завершению">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/README.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Store/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Veuwer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Store/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/game/GameActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/game/GameActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Store/game/GiveOutAPrize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/game/GiveOutAPrize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/game/PrizeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/game/ToyMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/game/ToyMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/operations/AddingToy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/AddingToy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/operations/CountChanging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/CountChanging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/operations/RemovingToy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/RemovingToy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/operations/ValueChanging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/ValueChanging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/toys/EndProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/operations/EndProgram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -101,11 +107,20 @@
       <option name="project" value="LOCAL" />
       <updated>1715540777569</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Сделано меню, и что-то ещё. Программа близится к завершению">
+      <option name="closed" value="true" />
+      <created>1715724278917</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715724278917</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первый коммит, хотя полработы уже сделано :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="Первый коммит, хотя полработы уже сделано :(" />
+    <MESSAGE value="Сделано меню, и что-то ещё. Программа близится к завершению" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделано меню, и что-то ещё. Программа близится к завершению" />
   </component>
 </project>
